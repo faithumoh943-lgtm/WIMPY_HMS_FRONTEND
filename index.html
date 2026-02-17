@@ -18,12 +18,16 @@ button{padding:10px 20px;background:#00ffcc;border:none}
 
 <script>
 async function login(){
-  const res = await fetch("http://wimpyhms-production.up.railway.app/login",{
+
+  const username = document.getElementById("u").value;
+  const password = document.getElementById("p").value;
+
+  const res = await fetch("https://wimpyhms-production.up.railway.app/login",{
     method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({
-      username:username.value,
-      password:password.value
+      username: username,
+      password: password
     })
   });
 
