@@ -62,7 +62,7 @@ th,td{border-bottom:1px solid #555;padding:10px;text-align:center}
 
 <script>
 function loadStaff(){
- fetch("http://wimpyhms-production.up.railway.app/staff")
+ fetch("https://wimpyhms-production.up.railway.app/staff")
  .then(r=>r.json())
  .then(d=>{
   list.innerHTML="";
@@ -73,7 +73,7 @@ function loadStaff(){
 }
 
 function addStaff(){
- fetch("http://wimpyhms-production.up.railway.app/add-staff",{
+ fetch("https://wimpyhms-production.up.railway.app/add-staff",{
   method:"POST",
   headers:{"Content-Type":"application/json"},
   body:JSON.stringify({name:name.value, role:role.value, salary:Number(salary.value)})
